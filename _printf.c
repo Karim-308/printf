@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * _printf - Custom printf function.
- * @format: format to print.
- * Return: number of chars printed.
+ * _printf - Custom implementation of the printf function.
+ * @format: The format string.
+ *
+ * Return: The number of characters printed.
  */
 int _printf(const char *format, ...)
 {
+	va_list args;	/* Argument list */
+	int counter = 0;	/* Character count */
+
 	if (!format)
 		return (-1);
 
-	va_list args;
 	va_start(args, format);
-
-	int counter = 0;
 
 	while (*format)
 	{
@@ -44,6 +45,8 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+
 	va_end(args);
 	return (counter);
 }
+
