@@ -8,6 +8,7 @@
 int handle_char(int c)
 {
 	char ch = (char)c;
+
 	write(1, &ch, 1);
 	return (1);
 }
