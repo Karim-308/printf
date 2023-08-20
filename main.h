@@ -10,6 +10,6 @@ int _printf(const char *format, ...);
 /* Handler function prototypes */
 int handle_char(int c);
 int handle_string(va_list args);
-int handle_percent();
+int handle_percent(void);
 
 #endif /* MAIN_H */
