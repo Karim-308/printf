@@ -2,7 +2,7 @@
 /**
  * handle_string - Handles string format specifier.
  * @args: Argument list
- * 
+ *
  * Return: Number of characters printed
  */
 int handle_string(va_list args)
