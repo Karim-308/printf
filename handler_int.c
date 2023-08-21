@@ -8,12 +8,15 @@
 int print_number(unsigned int n)
 {
 	int count = 0;
+	char c;
 
 	if (n / 10)
 		count += print_number(n / 10);
-	write(1, (char[]){(n % 10) + '0'}, 1);
+	c = (n % 10) + '0';
+	write(1, &c, 1);
 	return (count + 1);
 }
+
 
 /**
  * handle_int - Prints an integer.
