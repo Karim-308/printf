@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- * handle_format_specifier - Handle format specifiers
- * @format: Double pointer to the format string
- * @args: The va_list of arguments
+ * handle_format_specifier - Handles the format specifier
+ * @format: The format string pointer
+ * @args: Argument list
  *
- * Return: The number of characters printed for this format specifier
+ * Return: Number of characters printed
  */
 int handle_format_specifier(const char **format, va_list args)
 {
@@ -43,8 +42,8 @@ int _printf(const char *format, ...)
 	va_list args;
 	int counter = 0;
 
-	if (!format || format[0] == '%' && (!format[1] ||
-		(format[1] == ' ' && !format[2])))
+	if (!format || (format[0] == '%' && (!format[1] ||
+		(format[1] == ' ' && !format[2]))))
 		return (-1);
 
 	va_start(args, format);
@@ -64,3 +63,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (counter);
 }
+
