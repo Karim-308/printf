@@ -23,6 +23,10 @@ int handle_format_specifier(const char **format, va_list args)
 	case '%':
 		counter += handle_percent();
 		break;
+	case 'd':
+	case 'i':
+		counter += handle_int(args);
+		break;
 	default:
 		write(1, *format - 1, 2);  /* Revert back to '%' */
 		counter += 2;

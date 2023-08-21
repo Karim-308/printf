@@ -12,5 +12,7 @@ int handle_char(int c);
 int handle_string(va_list args);
 int handle_percent(void);
 int handle_format_specifier(const char **format, va_list args);
+int handle_int(va_list args);
+int print_number(unsigned int n);
 
 #endif /* MAIN_H */
