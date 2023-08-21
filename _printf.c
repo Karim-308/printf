@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * handle_format_specifier - Handles the format specifier
  * @format: The format string pointer
@@ -51,7 +52,9 @@ int _printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format == '%')
+		{
 			counter += handle_format_specifier(&format, args);
+		}
 		else
 		{
 			write(1, format, 1);
